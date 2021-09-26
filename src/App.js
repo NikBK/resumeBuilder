@@ -60,7 +60,7 @@ const CautionMessage = () => {
 
 function App() {
 
-  const nextSection = ['/', '/education', '/experience', '/projects', '/hobbies', '/Success'];
+  const nextSection = ['/resumeBuilder', '/education', '/experience', '/projects', '/hobbies', '/Success'];
   const [page, setPage] = useState(0);
   let finalPage = nextSection.length - 1;
 
@@ -84,7 +84,7 @@ function App() {
 
               <Switch>
 
-                <Route path='/' exact >
+                <Route path='/resumeBuilder' exact >
                   <CautionMessage />
                   <PersonalDetails />
                 </Route>
