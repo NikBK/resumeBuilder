@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/resumeBuilder/static/css/main.ac812336.chunk.css",
+    "main.js": "/resumeBuilder/static/js/main.edba552c.chunk.js",
+    "main.js.map": "/resumeBuilder/static/js/main.edba552c.chunk.js.map",
+    "runtime-main.js": "/resumeBuilder/static/js/runtime-main.cebec69a.js",
+    "runtime-main.js.map": "/resumeBuilder/static/js/runtime-main.cebec69a.js.map",
+    "static/js/2.0fb420aa.chunk.js": "/resumeBuilder/static/js/2.0fb420aa.chunk.js",
+    "static/js/2.0fb420aa.chunk.js.map": "/resumeBuilder/static/js/2.0fb420aa.chunk.js.map",
+    "static/js/3.b641066e.chunk.js": "/resumeBuilder/static/js/3.b641066e.chunk.js",
+    "static/js/3.b641066e.chunk.js.map": "/resumeBuilder/static/js/3.b641066e.chunk.js.map",
+    "static/js/4.dd0a4e6e.chunk.js": "/resumeBuilder/static/js/4.dd0a4e6e.chunk.js",
+    "static/js/4.dd0a4e6e.chunk.js.map": "/resumeBuilder/static/js/4.dd0a4e6e.chunk.js.map",
+    "static/js/5.fd40816b.chunk.js": "/resumeBuilder/static/js/5.fd40816b.chunk.js",
+    "static/js/5.fd40816b.chunk.js.map": "/resumeBuilder/static/js/5.fd40816b.chunk.js.map",
+    "static/js/6.3997b325.chunk.js": "/resumeBuilder/static/js/6.3997b325.chunk.js",
+    "static/js/6.3997b325.chunk.js.map": "/resumeBuilder/static/js/6.3997b325.chunk.js.map",
+    "index.html": "/resumeBuilder/index.html",
+    "static/css/main.ac812336.chunk.css.map": "/resumeBuilder/static/css/main.ac812336.chunk.css.map",
+    "static/js/2.0fb420aa.chunk.js.LICENSE.txt": "/resumeBuilder/static/js/2.0fb420aa.chunk.js.LICENSE.txt",
+    "static/js/3.b641066e.chunk.js.LICENSE.txt": "/resumeBuilder/static/js/3.b641066e.chunk.js.LICENSE.txt",
+    "static/js/4.dd0a4e6e.chunk.js.LICENSE.txt": "/resumeBuilder/static/js/4.dd0a4e6e.chunk.js.LICENSE.txt",
+    "static/js/5.fd40816b.chunk.js.LICENSE.txt": "/resumeBuilder/static/js/5.fd40816b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cebec69a.js",
+    "static/js/3.b641066e.chunk.js",
+    "static/css/main.ac812336.chunk.css",
+    "static/js/main.edba552c.chunk.js"
+  ]
+}
