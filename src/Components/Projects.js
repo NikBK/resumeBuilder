@@ -49,12 +49,12 @@ const Projects = ({ setPage }) => {
             <InputField handleChange={handleChange} placeholder='Link*' />
             <TextArea handleChange={handleChange} placeholder='Project Description*' />
         </div>
-        <Link to="/resumeBuilder/experience">
+        <Link to="/experience">
             <button id='next' onClick={() => setPage(prev => prev-1)}>
                 Prev section
             </button>
         </Link>
-        <Link to="/resumeBuilder/hobbies">
+        <Link to="/hobbies">
             <button id='next' onClick={() => setPage(prev => prev+1)}>
                 Next section
             </button>

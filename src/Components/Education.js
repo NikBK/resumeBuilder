@@ -43,12 +43,12 @@ const Education = ({ setPage }) => {
             <DatePicker handleChange={handleChange} placeholder='Education From*' />
             <DatePicker handleChange={handleChange} placeholder='Education To*' />
         </div>
-        <Link to="/resumeBuilder/">
+        <Link to="/">
             <button id='next' onClick={() => setPage(prev => prev-1)}>
                 Prev section
             </button>
         </Link>
-        <Link to="/resumeBuilder/experience">
+        <Link to="/experience">
             <button id='next' onClick={() => setPage(prev => prev+1)}>
                 Next section
             </button>
