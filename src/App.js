@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Task = ({ number, text }) => {
   let id = '';
-  if (window.location.pathname == '/resumeBuilder/personalDetails' && number == 1) {
+  if (window.location.pathname == '/resumeBuilder/' && number == 1) {
     id = 'Active';
   }
   else if (window.location.pathname == '/resumeBuilder/education' && number == 2) {
@@ -84,7 +84,7 @@ function App() {
 
               <Switch>
 
-                <Route path='/resumeBuilder/personalDetails' exact >
+                <Route path='/resumeBuilder/' exact >
                   <CautionMessage />
                 <PersonalDetails setPage={setPage} />
                 </Route>
