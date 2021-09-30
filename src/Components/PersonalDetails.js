@@ -34,7 +34,7 @@ const PersonalDetails = ({ setPage }) => {
             <InputField placeholder='Github*' handleChange={handleChange} />
             <InputField placeholder='ex: Java 4, JS 3*' handleChange={handleChange} />
         </div>
-        <Link to="/education">
+        <Link to="/resumeBuilder/education">
             <button id='next' onClick={() => setPage(prev => prev+1)}>
                 Next section
             </button>

@@ -32,12 +32,12 @@ const Hobbies = ({ setPage }) => {
         <div id='input-fields-container'>
             <TextArea handleChange={handleChange} placeholder='Hobbies Description*' />
         </div>
-        <Link to="/projects">
+        <Link to="/resumeBuilder/projects">
             <button id='next' onClick={() => setPage(prev => prev-1)}>
                 Prev section
             </button>
         </Link>
-        <Link to="/success">
+        <Link to="/resumeBuilder/success">
             <button id='next' onClick={() => setPage(prev => prev+1)}>
                 Next section
             </button>

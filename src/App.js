@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import PersonalDetails from './Components/PersonalDetails';
 import Education from './Components/Education';
@@ -11,19 +11,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Task = ({ number, text }) => {
   let id = '';
-  if (window.location.pathname == '/resumeBuilder' && number == 1) {
+  if (window.location.pathname == '/resumeBuilder/personalDetails' && number == 1) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/education' && number == 2) {
+  else if (window.location.pathname == '/resumeBuilder/education' && number == 2) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/experience' && number == 3) {
+  else if (window.location.pathname == '/resumeBuilder/experience' && number == 3) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/projects' && number == 4) {
+  else if (window.location.pathname == '/resumeBuilder/projects' && number == 4) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/hobbies' && number == 5) {
+  else if (window.location.pathname == '/resumeBuilder/hobbies' && number == 5) {
     id = 'Active';
   }
   return <div className='task'>
@@ -84,32 +84,32 @@ function App() {
 
               <Switch>
 
-                <Route path='/resumeBuilder' exact >
+                <Route path='/resumeBuilder/personalDetails' exact >
                   <CautionMessage />
                 <PersonalDetails setPage={setPage} />
                 </Route>
 
-                <Route path='/education' >
+                <Route path='/resumeBuilder/education' >
                   <CautionMessage />
                   <Education setPage={setPage} />
                 </Route>
 
-                <Route path='/experience' >
+                <Route path='/resumeBuilder/experience' >
                   <CautionMessage />
                   <Experience setPage={setPage} />
                 </Route>
 
-                <Route path='/projects' >
+                <Route path='/resumeBuilder/projects' >
                   <CautionMessage />
                   <Projects setPage={setPage} />
                 </Route>
 
-                <Route path='/hobbies' >
+                <Route path='/resumeBuilder/hobbies' >
                   <CautionMessage />
                   <Hobbies setPage={setPage} />
                 </Route>
 
-                <Route path='/success'  >
+                <Route path='/resumeBuilder/success'  >
                   <h1>Your resume is Ready!</h1>
                   {/* <button id='download'>Download Resume</button> */}
                   <Resume setPage={setPage} />

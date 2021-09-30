@@ -135,7 +135,7 @@ const Resume = ({ setPage }) => {
                 )}
             </ReactToPdf>
             <br />
-            <Link to="/hobbies">
+            <Link to="/resumeBuilder/hobbies">
                 <button id='next' onClick={() => setPage(prev => prev-1)}>
                     Prev section
                 </button>

@@ -82,12 +82,12 @@ const Experience = ({ setPage }) => {
             <DatePicker handleChange={handleChange} placeholder='Experience To*' />
             <TextArea handleChange={handleChange} placeholder='Experience Description*' />
         </div>
-        <Link to="/education">
+        <Link to="/resumeBuilder/education">
             <button id='next' onClick={() => setPage(prev => prev-1)}>
                 Prev section
             </button>
         </Link>
-        <Link to="/projects">
+        <Link to="/resumeBuilder/projects">
             <button id='next' onClick={() => setPage(prev => prev+1)}>
                 Next section
             </button>
