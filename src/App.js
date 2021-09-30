@@ -7,11 +7,11 @@ import Experience from './Components/Experience';
 import Projects from './Components/Projects';
 import Hobbies from './Components/Hobbies';
 import Resume from './Components/Resume';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Task = ({ number, text }) => {
   let id = '';
-  if (window.location.pathname == '/' && number == 1) {
+  if (window.location.pathname == '/resumeBuilder' && number == 1) {
     id = 'Active';
   }
   else if (window.location.pathname == '/education' && number == 2) {
@@ -54,19 +54,19 @@ const TaskContainer = () => {
 
 const CautionMessage = () => {
   return <>
-    <p>Do not worry, your previous data is already saved.</p>
+    <p style={{ fontSize: 12 }}>Do not worry, your previous data is already saved.</p>
   </>
 }
 
 function App() {
 
-  const nextSection = ['/resumeBuilder', '/education', '/experience', '/projects', '/hobbies', '/Success'];
+  // const nextSection = ['/resumeBuilder', '/education', '/experience', '/projects', '/hobbies', '/Success'];
   const [page, setPage] = useState(0);
-  let finalPage = nextSection.length - 1;
+  // let finalPage = nextSection.length - 1;
 
-  useEffect(() => {
-    setPage(page);
-  }, [page])
+  // useEffect(() => {
+  //   setPage(page);
+  // }, [page])
 
 
   return (
@@ -83,44 +83,43 @@ function App() {
             <div id='questions-container'>
 
               <Switch>
-                
 
                 <Route path='/resumeBuilder' exact >
                   <CautionMessage />
-                  <PersonalDetails />
+                <PersonalDetails setPage={setPage} />
                 </Route>
 
                 <Route path='/education' >
                   <CautionMessage />
-                  <Education />
+                  <Education setPage={setPage} />
                 </Route>
 
                 <Route path='/experience' >
                   <CautionMessage />
-                  <Experience />
+                  <Experience setPage={setPage} />
                 </Route>
 
                 <Route path='/projects' >
                   <CautionMessage />
-                  <Projects />
+                  <Projects setPage={setPage} />
                 </Route>
 
                 <Route path='/hobbies' >
                   <CautionMessage />
-                  <Hobbies />
+                  <Hobbies setPage={setPage} />
                 </Route>
 
-                <Route path='/Success'  >
+                <Route path='/success'  >
                   <h1>Your resume is Ready!</h1>
                   {/* <button id='download'>Download Resume</button> */}
-                  <Resume />
+                  <Resume setPage={setPage} />
                 </Route>
 
               </Switch>
 
             </div>
 
-            {page > 0 &&
+            {/* {page > 0 &&
               <Link to={nextSection[page - 1]}>
                 <button id='next' onClick={() => setPage(page - 1)}>
                   prev
@@ -133,7 +132,7 @@ function App() {
                   Next
                 </button>
               </Link>
-            }
+            } */}
 
           </Router>
 

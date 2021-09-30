@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import qa from './QuestionAnswers';
 import './resumeStyle.css';
 
@@ -64,7 +65,7 @@ const CheckType = ({ placeholder, handleChange }) => {
     </div>
 }
 
-const Experience = () => {
+const Experience = ({ setPage }) => {
     const handleChange = (e) => {
         qa.map(el => {
             if(e.target.id === el.identity){
@@ -81,6 +82,16 @@ const Experience = () => {
             <DatePicker handleChange={handleChange} placeholder='Experience To*' />
             <TextArea handleChange={handleChange} placeholder='Experience Description*' />
         </div>
+        <Link to="/education">
+            <button id='next' onClick={() => setPage(prev => prev-1)}>
+                Prev section
+            </button>
+        </Link>
+        <Link to="/projects">
+            <button id='next' onClick={() => setPage(prev => prev+1)}>
+                Next section
+            </button>
+        </Link>
     </>
 }
 

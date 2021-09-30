@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import qa from './QuestionAnswers';
 import './resumeStyle.css';
 
@@ -34,7 +35,7 @@ const TextArea = ({ placeholder, handleChange  }) => {
     </div>
 }
 
-const Projects = () => {
+const Projects = ({ setPage }) => {
     const handleChange = (e) => {
         qa.map(el => {
             if(e.target.id === el.identity){
@@ -48,6 +49,16 @@ const Projects = () => {
             <InputField handleChange={handleChange} placeholder='Link*' />
             <TextArea handleChange={handleChange} placeholder='Project Description*' />
         </div>
+        <Link to="/experience">
+            <button id='next' onClick={() => setPage(prev => prev-1)}>
+                Prev section
+            </button>
+        </Link>
+        <Link to="/hobbies">
+            <button id='next' onClick={() => setPage(prev => prev+1)}>
+                Next section
+            </button>
+        </Link>
     </>
 }
 

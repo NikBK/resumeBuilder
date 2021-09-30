@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import qa from './QuestionAnswers';
 
 const InputField = ({ placeholder, handleChange }) => {
@@ -7,19 +8,19 @@ const InputField = ({ placeholder, handleChange }) => {
         <fieldset>
             {showLegend && {} && <legend>{placeholder}</legend>}
             <input
-                onChange={handleChange} 
-                type='text' 
-                id={placeholder} 
-                placeholder={placeholder} 
+                onChange={handleChange}
+                type='text'
+                id={placeholder}
+                placeholder={placeholder}
                 onClick={() => setShowLegend(true)} />
         </fieldset>
     </div>
 }
 
-const PersonalDetails = () => {
+const PersonalDetails = ({ setPage }) => {
     const handleChange = (e) => {
         qa.map(el => {
-            if(e.target.id === el.identity){
+            if (e.target.id === el.identity) {
                 return el.a = e.target.value;
             }
         })
@@ -33,6 +34,11 @@ const PersonalDetails = () => {
             <InputField placeholder='Github*' handleChange={handleChange} />
             <InputField placeholder='ex: Java 4, JS 3*' handleChange={handleChange} />
         </div>
+        <Link to="/education">
+            <button id='next' onClick={() => setPage(prev => prev+1)}>
+                Next section
+            </button>
+        </Link>
     </>
 }
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import qa from './QuestionAnswers';
 
 const InputField = ({ placeholder, handleChange }) => {
@@ -25,7 +26,7 @@ const DatePicker = ({ placeholder, handleChange }) => {
     </div>
 }
 
-const Education = () => {
+const Education = ({ setPage }) => {
     const handleChange = (e) => {
         qa.map(el => {
             if(e.target.id === el.identity){
@@ -42,6 +43,16 @@ const Education = () => {
             <DatePicker handleChange={handleChange} placeholder='Education From*' />
             <DatePicker handleChange={handleChange} placeholder='Education To*' />
         </div>
+        <Link to="/resumeBuilder">
+            <button id='next' onClick={() => setPage(prev => prev-1)}>
+                Prev section
+            </button>
+        </Link>
+        <Link to="/experience">
+            <button id='next' onClick={() => setPage(prev => prev+1)}>
+                Next section
+            </button>
+        </Link>
     </>
 }
 

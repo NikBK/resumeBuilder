@@ -3,6 +3,7 @@ import qa from "./QuestionAnswers";
 import './resumeStyle.css'
 import ReactToPdf from "react-to-pdf";
 import { createRef } from 'react';
+import { Link } from "react-router-dom";
 
 const PersonalDetails = () => {
     return <>
@@ -107,7 +108,7 @@ const ExperienceDetails = () => {
     </>
 }
 
-const Resume = () => {
+const Resume = ({ setPage }) => {
     const ref = createRef();
     let pdfName = qa.filter(el => el.q == 'Name')[0].a.toString() + 'Resume';
     console.log(pdfName);
@@ -133,6 +134,12 @@ const Resume = () => {
                     <button onClick={toPdf} id='download'>Generate pdf</button>
                 )}
             </ReactToPdf>
+            <br />
+            <Link to="/hobbies">
+                <button id='next' onClick={() => setPage(prev => prev-1)}>
+                    Prev section
+                </button>
+            </Link>
         </>
     )
 }
