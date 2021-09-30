@@ -60,14 +60,7 @@ const CautionMessage = () => {
 
 function App() {
 
-  // const nextSection = ['/resumeBuilder', '/education', '/experience', '/projects', '/hobbies', '/Success'];
   const [page, setPage] = useState(0);
-  // let finalPage = nextSection.length - 1;
-
-  // useEffect(() => {
-  //   setPage(page);
-  // }, [page])
-
 
   return (
     <div className="App">
@@ -111,28 +104,12 @@ function App() {
 
                 <Route path='/success'  >
                   <h1>Your resume is Ready!</h1>
-                  {/* <button id='download'>Download Resume</button> */}
                   <Resume setPage={setPage} />
                 </Route>
 
               </Switch>
 
             </div>
-
-            {/* {page > 0 &&
-              <Link to={nextSection[page - 1]}>
-                <button id='next' onClick={() => setPage(page - 1)}>
-                  prev
-                </button>
-              </Link>
-            }
-            {page < finalPage &&
-              <Link to={nextSection[page + 1]}>
-                <button id='next' onClick={() => setPage(page + 1)}>
-                  Next
-                </button>
-              </Link>
-            } */}
 
           </Router>
 
