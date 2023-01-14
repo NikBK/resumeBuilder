@@ -1,0 +1,101 @@
+.resume-container{
+    /* margin: 10px 60px; */
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    font-family: 'Righteous', cursive;
+    box-sizing: border-box;
+    color: black;
+    background-color: white;
+    width: 800px;
+    overflow-x: hidden;
+}
+.personal-details, .education-details, .projects-details, .skills-details, .experience-details{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* font-size: 18px; */
+    font-size: 14px;
+}
+.personal-details>h3{
+    /* font-size: 26px; */
+    font-size: 20px;
+}
+.external-links{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+}
+.external-links>a{
+    display: block;
+    /* text-decoration: none; */
+    color: chartreuse;
+}
+.section-heading{
+    /* font-size: 24px; */
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.education-details table{
+    text-align: center;
+    border-collapse: collapse;
+}
+.education-details td{
+    /* border: 1px solid white; */
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+.projects-details h5, .experience-details h5{
+    /* font-size: 18px; */
+    font-size: 14px;
+    display: inline;
+}
+.projects-details a {
+    color: chartreuse;
+}
+.project-description-container, .skills-container, .experience-info{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.project-description-container li{
+    padding: 5px;
+}
+.skills-container td{
+    padding: 10px;
+    margin: 5px;
+}
+.experience-info>div{
+    margin: 10px;
+    /* padding: 10px; */
+}
+#download{
+    /* font-size: 16px; */
+    font-size: 12px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+  }
+#download:hover{
+    background-color: rgb(36, 147, 221);
+    color: white;
+}
+textarea{
+    width: 800px;
+    margin: 0;
+    height: 107px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+    textarea{
+        width: 100%;
+    }
+    input{
+        width: 30px;
+    }
+}

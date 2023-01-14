@@ -1,0 +1,169 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  box-sizing: border-box;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*,::before,::after{
+  box-sizing: border-box;
+}
+#form-container{
+  display: grid;
+  grid-template-columns: repeat(2, auto)
+}
+#form-container input:last-child{
+  grid-column: 2;
+}
+#tasks{
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-evenly;
+}
+.task{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+.task-number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: black;
+  min-width: 30px;
+  min-height: 30px;
+  margin: 0 5px;
+}
+.dash{
+  position: absolute;
+  height: 3px;
+  width: 100px;
+  background-color: black;
+}
+@media (min-width: 700px) and (max-width: 1200px){
+  .dash{
+    width: 40px;
+  }
+}
+@media screen and (max-width: 850px){
+  #tasks{
+    display: block;
+    /* margin: 0 250px;   */
+  }
+  .App-header{
+    display: block;
+  }
+  .dash{
+    width: 30px;
+  }
+}
+
+.dash:nth-child(2){
+  position: relative;
+}
+.dash:nth-child(4){
+  position: relative;
+}
+.dash:nth-child(6){
+  position: relative;
+}
+.dash:nth-child(8){
+  position: relative;
+}
+
+#input-fields-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.input-element{
+  margin: 20px 10px;
+  box-sizing: content-box;
+}
+.input-element input{
+  min-width: 400px;
+  height: 40px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+}
+@media screen and (max-width: 700px) {
+  #input-fields-container{
+    display: block;
+  }
+  .input-element input{
+    min-width: 100%;
+  }
+}
+
+fieldset{
+  padding: 0;
+  /* background-color: white;
+  color: red;
+  border-color: red; */
+}
+legend{
+  font-size: 0.8rem;
+  text-align: left;
+  font-weight: 500;
+}
+#download, #next{
+  /* height: 30px; */
+  /* width: 60px; */
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+#download:hover, #next:hover{
+  background-color: rgb(36, 147, 221);
+  color: white;
+}
+#questions-container{
+  min-height: 350px;
+}
+#Active{
+  background-color: #61dafb;
+  color: black;
+}
