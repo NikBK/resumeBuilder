@@ -11,19 +11,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Task = ({ number, text }) => {
   let id = '';
-  if (window.location.pathname == '/' && number == 1) {
+  if (window.location.pathname === '/' && number === 1) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/education' && number == 2) {
+  else if (window.location.pathname === '/education' && number === 2) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/experience' && number == 3) {
+  else if (window.location.pathname === '/experience' && number === 3) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/projects' && number == 4) {
+  else if (window.location.pathname === '/projects' && number === 4) {
     id = 'Active';
   }
-  else if (window.location.pathname == '/hobbies' && number == 5) {
+  else if (window.location.pathname === '/hobbies' && number === 5) {
     id = 'Active';
   }
   return <div className='task'>
@@ -79,7 +79,7 @@ function App() {
 
                 <Route path='/' exact >
                   <CautionMessage />
-                <PersonalDetails setPage={setPage} />
+                  <PersonalDetails setPage={setPage} />
                 </Route>
 
                 <Route path='/education' >

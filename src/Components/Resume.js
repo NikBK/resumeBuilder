@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 const PersonalDetails = () => {
     return <>
         <div className='personal-details'>
-            <h3>{qa.filter(obj => obj.q == 'Name')[0].a}</h3>
-            <div>Email: {qa.filter(obj => obj.q == 'Email')[0].a}</div>
-            <div>Contact no: {qa.filter(obj => obj.q == 'Mobile')[0].a}</div>
+            <h3>{qa.filter(obj => obj.q === 'Name')[0].a}</h3>
+            <div>Email: {qa.filter(obj => obj.q === 'Email')[0].a}</div>
+            <div>Contact no: {qa.filter(obj => obj.q === 'Mobile')[0].a}</div>
             <div className='external-links'>
-                <a href={qa.filter(obj => obj.q == 'LinkedIn')[0].a} target='_blank'>LinkedIn</a>
-                <a href={qa.filter(obj => obj.q == 'Github')[0].a} target='_blank'>Github</a>
+                <a href={qa.filter(obj => obj.q === 'LinkedIn')[0].a} rel="noreferrer" target='_blank'>LinkedIn</a>
+                <a href={qa.filter(obj => obj.q === 'Github')[0].a} rel="noreferrer" target='_blank'>Github</a>
             </div>
         </div>
     </>
@@ -34,10 +34,10 @@ const EducationDetails = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{qa.filter(obj => obj.q == 'Education To')[0].a}</td>
-                        <td>{qa.filter(obj => obj.q == 'Degree')[0].a} ( {qa.filter(obj => obj.q == 'Discipline')[0].a} )</td>
-                        <td>{qa.filter(obj => obj.q == 'School/College/University')[0].a}</td>
-                        <td>{qa.filter(obj => obj.q == 'Marks/Percentage/CGPA')[0].a}</td>
+                        <td>{qa.filter(obj => obj.q === 'Education To')[0].a}</td>
+                        <td>{qa.filter(obj => obj.q === 'Degree')[0].a} ( {qa.filter(obj => obj.q === 'Discipline')[0].a} )</td>
+                        <td>{qa.filter(obj => obj.q === 'School/College/University')[0].a}</td>
+                        <td>{qa.filter(obj => obj.q === 'Marks/Percentage/CGPA')[0].a}</td>
                     </tr>
                 </tbody>
             </table>
@@ -50,13 +50,13 @@ const ProjectDetails = () => {
         <div className='projects-details'>
             <div className='section-heading'>Projects</div>
             <div>
-                <h5>{qa.filter(obj => obj.q == 'Title')[0].a} | </h5>
-                <a href={qa.filter(obj => obj.q == 'Link')[0].a} target='_blank'>link</a>
+                <h5>{qa.filter(obj => obj.q === 'Title')[0].a} | </h5>
+                <a href={qa.filter(obj => obj.q === 'Link')[0].a} rel="noreferrer" target='_blank'>link</a>
                 <div className='project-description-container'>
-                    {qa.filter(obj => obj.q == 'Project Description')[0].a
+                    {qa.filter(obj => obj.q === 'Project Description')[0].a
                         .split('.')
                         .map(el => {
-                            if (el.trim() != '')
+                            if (el.trim() !== '')
                                 return <li>{el}</li>
                         })
                     }
@@ -72,7 +72,7 @@ const SkillsDetails = () => {
             <div className='section-heading'>Skills</div>
             <div className='skills-container'>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, auto)' }}>
-                    {qa.filter(obj => obj.q == 'ex: Java 4, JS 3')[0].a
+                    {qa.filter(obj => obj.q === 'ex: Java 4, JS 3')[0].a
                         .split(',')
                         .map(el => {
                             let res = el.trim().split(' ');
@@ -96,12 +96,12 @@ const ExperienceDetails = () => {
         <div className='experience-details'>
             <div className='section-heading'>Experience</div>
             <div>
-                <h5>{qa.filter(obj => obj.q == 'Organization')[0].a} | </h5>
-                <span><i>{qa.filter(obj => obj.q == 'Position')[0].a}</i></span>
+                <h5>{qa.filter(obj => obj.q === 'Organization')[0].a} | </h5>
+                <span><i>{qa.filter(obj => obj.q === 'Position')[0].a}</i></span>
                 <div className='experience-info'>
-                    <div>{qa.filter(obj => obj.q == 'Experience Description')[0].a}</div>
-                    <div>From : {qa.filter(obj => obj.q == 'Experience From')[0].a}</div>
-                    <div>Till : {qa.filter(obj => obj.q == 'Experience To')[0].a}</div>
+                    <div>{qa.filter(obj => obj.q === 'Experience Description')[0].a}</div>
+                    <div>From : {qa.filter(obj => obj.q === 'Experience From')[0].a}</div>
+                    <div>Till : {qa.filter(obj => obj.q === 'Experience To')[0].a}</div>
                 </div>
             </div>
         </div>
@@ -110,7 +110,7 @@ const ExperienceDetails = () => {
 
 const Resume = ({ setPage }) => {
     const ref = createRef();
-    let pdfName = qa.filter(el => el.q == 'Name')[0].a.toString() + 'Resume';
+    let pdfName = qa.filter(el => el.q === 'Name')[0].a.toString() + 'Resume';
     console.log(pdfName);
 
     return (
@@ -136,7 +136,7 @@ const Resume = ({ setPage }) => {
             </ReactToPdf>
             <br />
             <Link to="/hobbies">
-                <button id='next' onClick={() => setPage(prev => prev-1)}>
+                <button id='next' onClick={() => setPage(prev => prev - 1)}>
                     Prev section
                 </button>
             </Link>
