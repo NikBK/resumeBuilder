@@ -1,6 +1,5 @@
 import './App.css';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import PersonalDetails from './Components/PersonalDetails';
 import Education from './Components/Education';
 import Experience from './Components/Experience';
@@ -11,19 +10,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Task = ({ number, text }) => {
   let id = '';
-  if (window.location.pathname == '/' && number == 1) {
+  if (window.location.pathname === '/' && number === '1') {
     id = 'Active';
   }
-  else if (window.location.pathname == '/education' && number == 2) {
+  else if (window.location.pathname === '/education' && number === '2') {
     id = 'Active';
   }
-  else if (window.location.pathname == '/experience' && number == 3) {
+  else if (window.location.pathname === '/experience' && number === '3') {
     id = 'Active';
   }
-  else if (window.location.pathname == '/projects' && number == 4) {
+  else if (window.location.pathname === '/projects' && number === '4') {
     id = 'Active';
   }
-  else if (window.location.pathname == '/hobbies' && number == 5) {
+  else if (window.location.pathname === '/hobbies' && number === '5') {
     id = 'Active';
   }
   return <div className='task'>
@@ -61,9 +60,22 @@ const CautionMessage = () => {
 function App() {
 
   const [page, setPage] = useState(0);
+  const [showPopUp, setShowPopUp] = useState(true);
 
   return (
     <div className="App">
+      {
+        showPopUp
+        &&
+        <div className='netlify-popup-msg'>
+          <h2>Note</h2>
+          <div>
+            <div>This application works fine in local but has issues with Netlify hosting.</div>
+            <div>Hence some features might not work as expected.</div>
+          </div>
+          <button className='popup-btn' onClick={() => setShowPopUp(false)}>OK</button>
+        </div>
+      }
       <div className="App-header">
         <h1>We create your resume!</h1>
 
@@ -79,7 +91,7 @@ function App() {
 
                 <Route path='/' exact >
                   <CautionMessage />
-                <PersonalDetails setPage={setPage} />
+                  <PersonalDetails setPage={setPage} />
                 </Route>
 
                 <Route path='/education' >

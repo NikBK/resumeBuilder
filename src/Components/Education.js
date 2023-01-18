@@ -7,11 +7,11 @@ const InputField = ({ placeholder, handleChange }) => {
     return <div className='input-element'>
         <fieldset>
             {showLegend && {} && <legend>{placeholder}</legend>}
-            <input 
+            <input
                 onChange={handleChange}
-                id={placeholder} 
+                id={placeholder}
                 type='text'
-                placeholder={placeholder} 
+                placeholder={placeholder}
                 onClick={() => setShowLegend(true)} />
         </fieldset>
     </div>
@@ -29,9 +29,10 @@ const DatePicker = ({ placeholder, handleChange }) => {
 const Education = ({ setPage }) => {
     const handleChange = (e) => {
         qa.map(el => {
-            if(e.target.id === el.identity){
+            if (e.target.id === el.identity) {
                 return el.a = e.target.value;
             }
+            return null;
         })
     }
     return <>
@@ -44,12 +45,12 @@ const Education = ({ setPage }) => {
             <DatePicker handleChange={handleChange} placeholder='Education To*' />
         </div>
         <Link to="/">
-            <button id='next' onClick={() => setPage(prev => prev-1)}>
+            <button id='next' onClick={() => setPage(prev => prev - 1)}>
                 Prev section
             </button>
         </Link>
         <Link to="/experience">
-            <button id='next' onClick={() => setPage(prev => prev+1)}>
+            <button id='next' onClick={() => setPage(prev => prev + 1)}>
                 Next section
             </button>
         </Link>

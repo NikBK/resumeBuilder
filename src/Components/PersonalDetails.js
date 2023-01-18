@@ -23,6 +23,7 @@ const PersonalDetails = ({ setPage }) => {
             if (e.target.id === el.identity) {
                 return el.a = e.target.value;
             }
+            return null;
         })
     }
     return <>
@@ -35,7 +36,7 @@ const PersonalDetails = ({ setPage }) => {
             <InputField placeholder='ex: Java 4, JS 3*' handleChange={handleChange} />
         </div>
         <Link to="/education">
-            <button id='next' onClick={() => setPage(prev => prev+1)}>
+            <button id='next' onClick={() => setPage(prev => prev + 1)}>
                 Next section
             </button>
         </Link>

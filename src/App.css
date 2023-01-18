@@ -7,6 +7,51 @@
   pointer-events: none;
 }
 
+.netlify-popup-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: rgb(132, 36, 221);
+  height: 80vh;
+  width: 80vw;
+  font-size: 24px;
+  z-index: 2;
+  animation: come .5s linear;
+}
+
+@keyframes come {
+  0% {
+    top: -50%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+.netlify-popup-msg>h2 {
+  color: black;
+}
+
+.popup-btn {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 10px;
+  padding: 10px;
+  background-color: #10b0b6;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,33 +80,42 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-*,::before,::after{
+
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
-#form-container{
+
+#form-container {
   display: grid;
   grid-template-columns: repeat(2, auto)
 }
-#form-container input:last-child{
+
+#form-container input:last-child {
   grid-column: 2;
 }
-#tasks{
+
+#tasks {
   display: flex;
   align-items: center;
   position: relative;
   justify-content: space-evenly;
 }
-.task{
+
+.task {
   display: flex;
   align-items: center;
   padding: 0 10px;
   font-size: 1.2rem;
 }
-.task-number{
+
+.task-number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,80 +126,95 @@
   min-height: 30px;
   margin: 0 5px;
 }
-.dash{
+
+.dash {
   position: absolute;
   height: 3px;
   width: 100px;
   background-color: black;
 }
-@media (min-width: 700px) and (max-width: 1200px){
-  .dash{
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  .dash {
     width: 40px;
   }
 }
-@media screen and (max-width: 850px){
-  #tasks{
+
+@media screen and (max-width: 850px) {
+  #tasks {
     display: block;
     /* margin: 0 250px;   */
   }
-  .App-header{
+
+  .App-header {
     display: block;
   }
-  .dash{
+
+  .dash {
     width: 30px;
   }
 }
 
-.dash:nth-child(2){
-  position: relative;
-}
-.dash:nth-child(4){
-  position: relative;
-}
-.dash:nth-child(6){
-  position: relative;
-}
-.dash:nth-child(8){
+.dash:nth-child(2) {
   position: relative;
 }
 
-#input-fields-container{
+.dash:nth-child(4) {
+  position: relative;
+}
+
+.dash:nth-child(6) {
+  position: relative;
+}
+
+.dash:nth-child(8) {
+  position: relative;
+}
+
+#input-fields-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.input-element{
+
+.input-element {
   margin: 20px 10px;
   box-sizing: content-box;
 }
-.input-element input{
+
+.input-element input {
   min-width: 400px;
   height: 40px;
   font-size: 1.2rem;
   outline: none;
   border: none;
 }
+
 @media screen and (max-width: 700px) {
-  #input-fields-container{
+  #input-fields-container {
     display: block;
   }
-  .input-element input{
+
+  .input-element input {
     min-width: 100%;
   }
 }
 
-fieldset{
+fieldset {
   padding: 0;
   /* background-color: white;
   color: red;
   border-color: red; */
 }
-legend{
+
+legend {
   font-size: 0.8rem;
   text-align: left;
   font-weight: 500;
 }
-#download, #next{
+
+#download,
+#next {
   /* height: 30px; */
   /* width: 60px; */
   font-size: 16px;
@@ -156,14 +225,18 @@ legend{
   align-items: center;
   justify-content: center;
 }
-#download:hover, #next:hover{
+
+#download:hover,
+#next:hover {
   background-color: rgb(36, 147, 221);
   color: white;
 }
-#questions-container{
+
+#questions-container {
   min-height: 350px;
 }
-#Active{
+
+#Active {
   background-color: #61dafb;
   color: black;
 }
