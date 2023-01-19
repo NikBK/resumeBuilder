@@ -79,7 +79,7 @@ function App() {
       <div className="App-header">
         <h1>We create your resume!</h1>
 
-        <form noValidate>
+        <form onSubmit={(e) => e.preventDefault()} noValidate>
 
           <TaskContainer />
 
@@ -128,7 +128,7 @@ function App() {
         </form>
 
       </div>
-    </div>
+    </div >
   );
 }
 

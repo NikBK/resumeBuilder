@@ -2,6 +2,7 @@ import React from "react";
 import qa from "./QuestionAnswers";
 import './resumeStyle.css'
 import ReactToPdf from "react-to-pdf";
+import Pdf from "react-to-pdf";
 import { createRef } from 'react';
 import { Link } from "react-router-dom";
 
@@ -134,6 +135,12 @@ const Resume = ({ setPage }) => {
                     <button onClick={toPdf} id='download'>Generate pdf</button>
                 )}
             </ReactToPdf>
+
+            {/* Another approach */}
+            {/* <Pdf targetRef={ref} filename="code-example.pdf">
+                {({ toPdf }) => <button onClick={toPdf}>Generate Pdf now</button>}
+            </Pdf> */}
+
             <br />
             <Link to="/hobbies">
                 <button id='next' onClick={() => setPage(prev => prev - 1)}>
